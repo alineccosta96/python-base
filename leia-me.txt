@@ -1,0 +1,3 @@
+Ativar a venv no PowerShell: 
+
+.venv\Scripts\Activate.ps1
