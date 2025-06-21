@@ -1,0 +1,64 @@
+# Atributo
+É uma variável que pertence a um objeto.
+Representa uma característica ou estado do objeto.
+Pode ser acessado diretamente com obj.atributo.
+
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome  # atributo
+        self.idade = idade  # atributo
+
+p = Pessoa("Ana", 30)
+print(p.nome)  # saída: Ana
+
+----------------------------------------
+# Método
+É uma função definida dentro de uma classe.
+Representa um comportamento ou ação que o objeto pode realizar.
+É chamado com obj.metodo().
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):  # método
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+
+p = Pessoa("Ana", 30)
+print(p.apresentar())  # saída: Olá, meu nome é Ana e tenho 30 anos.
+----------------------------------
+
+Conceito	O que é?	                Exemplo de uso
+Atributo	Dado/variável do objeto	    p.nome
+Método	   Função do objeto	            p.apresentar()
+
+------------------------------------------
+Em Python, tudo é um objeto — números, strings, listas, funções, até mesmo classes. Mas o que exatamente é um objeto?
+
+# O que é um objeto?
+Um objeto é uma instância de uma classe. Ele representa uma entidade com dados (atributos) 
+e comportamentos (métodos).
+
+Pense em uma classe como um molde (como a planta de uma casa), e o objeto como a casa construída 
+a partir desse molde.
+
+
+class Cachorro:
+    def __init__(self, nome):
+        self.nome = nome
+
+    def latir(self):
+        print(f"{self.nome} diz: Au au!")
+
+# Criando um objeto da classe Cachorro
+meu_cachorro = Cachorro("Rex")
+
+# Usando o objeto
+meu_cachorro.latir()  # Saída: Rex diz: Au au!
+
+Cachorro é a classe.
+meu_cachorro é um objeto (ou instância) da classe Cachorro.
+nome é um atributo.
+latir() é um método.

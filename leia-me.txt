@@ -1,3 +1,7 @@
 Ativar a venv no PowerShell: 
 
 .venv\Scripts\Activate.ps1
+-------------------------------------------------------
+Bilbiotecas aprendidas: 
+ipython > é colorido, tem auto copilate e tem mais funções dentro do help. É o Jupter para terminal
+-------------------------------------------------------

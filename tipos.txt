@@ -1,0 +1,49 @@
+# Inteiro
+Como retornar o valor da posição em memoria:
+numero = 65
+bin(numero) 
+
+type(numero) : retorna o tipo de dado desse numero; Exemplo: int
+
+dir(int): lista de todos os atributos e métodos disponíveis para o tipo int.
+Isso inclui métodos especiais (também chamados de "dunder methods", como __add__, __str__, etc.) 
+e métodos normais que você pode usar com inteiros.
+------------------------------------------------------
+# FLOAT
+# Resultados de divisão
+valor = 5 / 2
+
+# Coordenadas geográficas
+latitude = -37.80467681 
+longitude = 144.9659498
+
+# Saldo de pontuação (em jogos por exempo)
+pontos = 355.8
+NOTA Para trabalhar com dados monetários (dinheiro) damos preferência a um tipo especializado 
+
+------------------------------------------------------
+# BOELANO
+# Tornar um usuário administrador
+is_admin = True
+
+# Verificar se o usuário quer continuar uma operação
+continuar = False
+
+# Definir se um produto está ativo em uma loja
+active = True
+
+------------------------------------------------------
+# None
+
+produto = None
+
+if produto is None:
+    produto = funcao_para_definicao_do_produto()
+
+
+None é nulo ou ausencia de valor 
+
+----------------------------------------------------
+
+
+
