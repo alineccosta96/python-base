@@ -1,11 +1,20 @@
 '''
 Em pyhton, temos o operador set. Ele pode ser representado por: 
 a = {1,2,3} ou a= set((1,2,3)) (o último é mais recomendado pq pode ser confundido com lista ou tupla)
+Quando quiser remover duplicidade
+Quando quiser fazer operação de conjuntos
+Quando quiser garantir que vai inserir dado e ele não vai permitir repetido.
+
+O set não mantém ordem de lista, portanto, não da para garantir a consulta de lista: 
+ex: a =set([1,2,3]) print(a[0]) < não da para fazer. 
+
+Quando usamos set usamos também hash table:
+o python esaneia uma lista de dados e mapeia, evitando sempre percorrer a lsita para
+achar. Ganhamos aqui: processamento.
 '''
 
 # União (pode ser representado por "|" ou union)
 # Remove os duplicados - Não garante ordem que retorna no print
-
 conjunto_a = set([1,2,3,4,5]) 
 conjunto_b = set([4,5,6,7,8])
 conjunto_banana = set("banana") 
