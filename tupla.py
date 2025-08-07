@@ -58,3 +58,6 @@ coord[0]
 # fatiar
 coord[1:]
 (200, 9)
+
+compra = ("Bruno", "caneta")
+print(f"O cliente {compra[0]} comprou {compra[1]}")

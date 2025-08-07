@@ -62,3 +62,7 @@ Cachorro é a classe.
 meu_cachorro é um objeto (ou instância) da classe Cachorro.
 nome é um atributo.
 latir() é um método.
+--------------------------------------
+Para acessar qualquer coisa em python é com []
+para separar dicinário é o ":"
+para atribuir é =
