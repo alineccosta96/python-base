@@ -5,3 +5,5 @@ Ativar a venv no PowerShell:
 Bilbiotecas aprendidas: 
 ipython > é colorido, tem auto copilate e tem mais funções dentro do help. É o Jupter para terminal
 -------------------------------------------------------
+import pprint
+pprint.pprint() # Deixa o print mais "bonito"

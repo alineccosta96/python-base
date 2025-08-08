@@ -12,7 +12,7 @@ class Pessoa:
 p = Pessoa("Ana", 30)
 print(p.nome)  # saída: Ana
 
-----------------------------------------
+=============================================
 # Método
 É uma função definida dentro de uma classe.
 Representa um comportamento ou ação que o objeto pode realizar.
@@ -28,13 +28,13 @@ class Pessoa:
 
 p = Pessoa("Ana", 30)
 print(p.apresentar())  # saída: Olá, meu nome é Ana e tenho 30 anos.
-----------------------------------
+=============================================
 
 Conceito	O que é?	                Exemplo de uso
 Atributo	Dado/variável do objeto	    p.nome
 Método	   Função do objeto	            p.apresentar()
 
-------------------------------------------
+===============================================
 Em Python, tudo é um objeto — números, strings, listas, funções, até mesmo classes. Mas o que exatamente é um objeto?
 
 # O que é um objeto?
@@ -62,7 +62,19 @@ Cachorro é a classe.
 meu_cachorro é um objeto (ou instância) da classe Cachorro.
 nome é um atributo.
 latir() é um método.
---------------------------------------
+=============================================
 Para acessar qualquer coisa em python é com []
 para separar dicinário é o ":"
 para atribuir é =
+=============================================
+Input serve para eu ler alguma coisa do python 
+
+nome = input("Digite seu nome:" )
+
+O input espera uma interação "humana" 
+
+ELe também serve para quando quiser pausar o programa Ex.: 
+
+input("aperte enter para continuar")
+
+OBS: só serve enter porque depois de digitar o nome precisar dar um "enter"

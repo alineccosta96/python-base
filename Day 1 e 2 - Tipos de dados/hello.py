@@ -13,18 +13,19 @@ Execução:
     ./hello.py
 """
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"
 __author__ =  "Aline Costa"
 __lincese__ = "Unlicense"
 
 import os 
 
-list_current_language = {
-    "en_US" : "Hello, World!",
-    "pt_BR" : "Olá, Mundo!",
-    "it_IT" : "Cia, Mondo!"
-}
-
 current_language = os.getenv("LANG", "en_US")[:5] #Caso não exista, usar a ligua inglesa e pegue somente os primeiros 5 caracteres para não retornar "en_US.utf8"
 
-print(list_current_language[current_language])
+msg = "Hello, World!"
+
+if current_language == "pt_BR":
+    msg = "Olá, Mundo!"
+elif current_language == "it_IT":
+    msg = "Cia, Mondo!"
+
+print(msg)
