@@ -1,30 +1,82 @@
-""" Hello Word em diferentes linguas.
+"""Hello World Multi Linguas.
 
-Dependendo da lingua configurada no ambiente o programa usa a lingua
-correspondente
+Dependendo da lingua configurada no ambiente o programa exibe a mensagem
+correspondente.
 
-Como usar: 
-    Tenha a variavel LANG devidamente configurada
+Como usar:
+
+Tenha a variável LANG devidamente configurada ex:
 
     export LANG=pt_BR
-Execução: 
+
+Ou informe atraves do CLI argument `--lang`
+
+Ou o usuário terá que digitar.
+
+Execução:
+
     python3 hello.py
     ou
     ./hello.py
 """
+__version__ = "0.1.3"
+__author__ = "Bruno Rocha"
+__license__ = "Unlicense"
 
-__version__ = "0.3.0"
-__author__ =  "Aline Costa"
-__lincese__ = "Unlicense"
+import logging
+import os
+import sys
 
-import os 
 
-list_current_language = {
-    "en_US" : "Hello, World!",
-    "pt_BR" : "Olá, Mundo!",
-    "it_IT" : "Cia, Mondo!"
+arguments = {"lang": None, "count": 1}
+
+for arg in sys.argv[1:]:
+    try:
+        key, value = arg.split("=")
+    except ValueError as e:
+        print(f"Error:{str(e)}")
+        sys.exit(1)
+
+    key = key.lstrip("-").strip()
+    value = value.strip()
+
+    # Validação
+    if key not in arguments:
+        print(f"Invalid Option `{key}`")
+        sys.exit()
+
+    arguments[key] = value
+
+current_language = arguments["lang"]
+
+if current_language is None:
+    if "LANG" in os.environ:
+        current_language = os.getenv("LANG")
+    else:
+        current_language = input("Choose a language:")
+
+current_language = current_language[:5]
+
+msg = {
+    "en_US": "Hello, World!",
+    "pt_BR": "Olá, Mundo!",
+    "it_IT": "Ciao, Mondo!",
+    "es_ES": "Hola, Mundo!",
+    "fr_FR": "Bonjour, Monde!",
 }
 
-current_language = os.getenv("LANG", "en_US")[:5] #Caso não exista, usar a ligua inglesa e pegue somente os primeiros 5 caracteres para não retornar "en_US.utf8"
 
-print(list_current_language[current_language])
+"""
+# try com valor default
+message = msg.get(current_language, msg["en_US"])
+"""
+
+# EAFP
+try:
+    message = msg[current_language]
+except KeyError as e:
+    print(f"[ERROR] {str(e)}")
+    print(f"Language is invalid, choose from: {list(msg.keys())}")
+    sys.exit(1)
+
+print(message * int(arguments["count"]))

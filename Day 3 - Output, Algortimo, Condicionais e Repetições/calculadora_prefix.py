@@ -11,6 +11,7 @@ __version__ = '0.1'
 __author__ = "Aline Costa"
 
 import os
+import sys
 
 from pathlib import Path
 from datetime import datetime
@@ -60,12 +61,14 @@ else:
     elif simbolo == '/':        
         total = num1 / num2
     
-with (arquivo.open("a")) as f:   
-    # Não funciona assim porque a linha só aceita um parametro de string, no caso abaixo usei 2
-    #f.write(f"O resultado da operação é:", num1, simbolo, num2, "=", total)
-    data = datetime.now().strftime("%Y-%m-%d %H:%M:%S")    
-    f.write(f"{data} - O resultado da operação é: {num1} {simbolo} {num2} = {total}\n")
-    print("Salvando no log....")
+try:
+    with (arquivo.open("a")) as f:     
+        data = datetime.now().strftime("%Y-%m-%d %H:%M:%S")    
+        f.write(f"{data} - O resultado da operação é: {num1} {simbolo} {num2} = {total}\n")
+        print("Salvando no log....")
+except PermissionError:
+    print(f"Error: Por favor solicitar permissão de escrita no arquivo {arquivo}")
+    sys.exit()
 
 print(f"O total da operação é:", total)
 
