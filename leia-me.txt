@@ -1,0 +1,28 @@
+Ativar a venv no PowerShell: 
+
+.venv\Scripts\Activate.ps1
+-------------------------------------------------------
+Bilbiotecas aprendidas: 
+ipython > é colorido, tem auto copilate e tem mais funções dentro do help. É o Jupter para terminal
+-------------------------------------------------------
+import pprint
+pprint.pprint() # Deixa o print mais "bonito"
+
+------------------------------------------------------
+Statements
+Se -> If (condicao)
+Senão -> elif (condicao) / else
+
+Operadores lógicos
+E -> and (condicao composta com porta lógica AND)
+OU -> or (condicao composta com porta lógica OR)
+NÃO -> not (sinal de negação)
+------------------------------------------------------
+if temperatura > 30:
+    mensagem = "Está calor"
+else:
+    mensagem = "Está frio"
+
+Pode ser reescrito com:
+
+mensagem = "Está calor" if temperatura > 30 else "Está frio"
