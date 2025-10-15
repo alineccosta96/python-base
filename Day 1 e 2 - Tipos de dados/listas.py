@@ -31,3 +31,12 @@ users.append("Alana") #insere novamente
 print(users)
 users.remove("Alana") #Ele tira somente a primeira que encontrar. Precisafazer isso até tirar todas
 print(users)
+
+'''
+O método join() é usado para juntar os elementos de uma lista em uma única string.
+O que você coloca antes do .join() é o separador entre os elementos.
+No caso: ', '.join(TO) significa que os elementos da lista serão unidos por uma vírgula seguida de espaço.
+'''
+TO = ["destino@outroserver.com", "outro@server.com"]
+
+print(', '.join(TO))

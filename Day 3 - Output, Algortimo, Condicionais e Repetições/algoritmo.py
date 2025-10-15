@@ -1,4 +1,4 @@
-# Transformando em pseudo-código
+# Transformando em pseudo-código - Ele não funciona mesmo
 
 import pegar, ir, pedir, tem, comer
 
@@ -11,7 +11,7 @@ frio = False
 nevando = True
 semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"]
 feriados = ["Quarta"]
-horario_padaria {
+horario_padaria = {
     "semana": 19,
     "fds": 12,
 }
@@ -42,7 +42,7 @@ if padaria_aberta:
 
     if tem("pao integral") and tem("baguete"):
         pedir(6, "pao integral")
-        pedir(6 "baguete")
+        pedir(6, "baguete")
     elif tem("pao integral") or tem("baguete"):
         pedir(12, "pao integral ou baguete")
     else:

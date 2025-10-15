@@ -78,3 +78,56 @@ ELe também serve para quando quiser pausar o programa Ex.:
 input("aperte enter para continuar")
 
 OBS: só serve enter porque depois de digitar o nome precisar dar um "enter"
+
+===========================================
+
+Posso alterar o valor de uma variável global dentro de uma função?
+Se o valor da variável global for imutável, então para alterar o apontamento da variável global precisaremos dizer ao Python que ao invés de estarmos fazendo uma nova atribuição local estamos substituindo o apontamento da variável global.
+
+nome = "valor" # string imutável global
+
+def muda_nome():
+    # explicitamante dizemos que a variavel é global
+    global nome
+    # reatribuição do apontamento da variável global
+    nome = "outro valor"  
+
+muda_nome()
+
+print(nome)
+# outro valor
+
+===================================================
+
+Posso criar uma variável global dentro de uma função?
+Sim, basta utilizar a palavra global antes da variável que desejamos criar globalmente.
+
+def cria_nome():
+    global nome
+    nome = "valor"
+
+print(nome)
+# NameError: name 'nome' is not defined
+
+cria_nome()
+print(nome)
+# valor
+
+===================================================================
+
+as se por acaso quisermos acessar a variável nome do escopo global, podemos usar a função globals() que é um dicionário que contém todas as variáveis do escopo global.
+
+nome = 'valor'  # variável global
+
+def funcao1():
+    nome = 'outro valor'  # variável local
+    nome = nome + globals()['nome']  # acesso a variável global  
+    return nome  # o valor de retorno é o da variável local
+
+print(funcao1())  # O valor de retorno é acessado
+# outro valorvalor
+
+print(nome)  # Continua com o valor da variável global
+# valor
+
+==========================

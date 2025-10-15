@@ -1,0 +1,3 @@
+Aline, 3, 2
+Alana, 1, 1
+Ingrid, 2, 6
